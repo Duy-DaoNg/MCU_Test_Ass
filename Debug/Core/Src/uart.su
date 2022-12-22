@@ -1,1 +1,1 @@
-uart.c:93:6:uart_transmit	8	static
+uart.c:10:6:uart_transmit	8	static

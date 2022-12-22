@@ -17,16 +17,7 @@
   *
   * Microelectronics.
   * All rights reserved.</center></h2>
-  *
-
-
-
-
-
-
-
-
-';\;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;           opensource.org/licenses/BSD-3-Clause
+  *	opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   */
@@ -119,8 +110,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   setTimer1(100);
   setTimer2(100);
-  setTimer5(100);
-//  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 0);
   while (1)
   {
 	  FSM_Traffic_Light_Row();
@@ -128,29 +117,6 @@ int main(void)
 	  FSM_Pedestrian();
 	  display_traffic_light();
 	  FSM_Buzzer();
-//	  if (timer5Flag){
-//		  HAL_UART_Transmit(&huart2, (void *) str, sprintf(str, "OK\r\n"), 1000 );
-//	  }
-//	  if(buttonPressed_flag[3]){
-//		  buttonPressed_flag[3] = 0;
-//			HAL_GPIO_WritePin(TL1_SIGNAL1_GPIO_Port, TL1_SIGNAL1_Pin, RESET);
-//			HAL_GPIO_WritePin(TL1_SIGNAL2_GPIO_Port, TL1_SIGNAL2_Pin, SET);
-//	  }
-//	  if(buttonPressed_flag[2]){
-//		  buttonPressed_flag[2] = 0;
-//			HAL_GPIO_WritePin(TL1_SIGNAL1_GPIO_Port, TL1_SIGNAL1_Pin, SET);
-//			HAL_GPIO_WritePin(TL1_SIGNAL2_GPIO_Port, TL1_SIGNAL2_Pin, RESET);
-//	  }
-//	  if(buttonPressed_flag[1]){
-//		  buttonPressed_flag[1] = 0;
-//			HAL_GPIO_WritePin(TL1_SIGNAL1_GPIO_Port, TL1_SIGNAL1_Pin, SET);
-//			HAL_GPIO_WritePin(TL1_SIGNAL2_GPIO_Port, TL1_SIGNAL2_Pin, SET);
-//	  }
-//	  if(buttonPressed_flag[0]){
-//		  buttonPressed_flag[0] = 0;
-//			HAL_GPIO_WritePin(TL1_SIGNAL1_GPIO_Port, TL1_SIGNAL1_Pin, SET);
-//			HAL_GPIO_WritePin(TL1_SIGNAL2_GPIO_Port, TL1_SIGNAL2_Pin, SET);
-//	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -49,9 +49,9 @@ int FSM_Pedestrian_State;
 #define MANUAL_GREEN 	4
 #define MANUAL_YEL 		5
 #define BLACK_HOLE		6
-#define HAND_RED		7
-#define HAND_GREEN		8
-#define HAND_YEL		9
+#define SET_RED			7
+#define SET_GREEN		8
+#define SET_YEL			9
 #define IDLE			0
 #define WORK			1
 ////////////////Buzzer//////////////////
@@ -82,8 +82,10 @@ int yellow_time;
 int traffic_light_remain_time_row;
 int traffic_light_remain_time_col;
 
+int TIMER3_PEDESTRIAN_CYCLE;
+
 #define TIMER1_SECOND_DURATION 		100  // 1s
 #define TIMER1_10SECOND_DURATION 	1000 // 10s
-#define TIMER3_PEDESTRIAN_CYCLE 	1000 // 10s
+//#define TIMER3_PEDESTRIAN_CYCLE 	1000 // 10s
 int Set_TL_Time;
 #endif /* INC_GLOBAL_H_ */

@@ -10,7 +10,6 @@
 
 #include "global.h"
 
-//void HAL_UART_RxCpltCallback(UART_HandleTypeDef*);
 void uart_transmit();
 
 #endif /* INC_UART_H_ */

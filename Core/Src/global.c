@@ -28,8 +28,6 @@ int timer3Counter = 0;
 int timer3Flag = 0;
 int timer4Counter = 0;
 int timer4Flag = 0;
-int timer5Counter = 2;
-int timer5Flag = 0;
 ////////////Light time////////////////////
 int red_time = 5;
 int green_time = 3;
@@ -37,3 +35,5 @@ int yellow_time = 2;
 int traffic_light_remain_time_row = 5;
 int traffic_light_remain_time_col = 3;
 int Set_TL_Time = 0;
+////////////Pedestrian mode time////////////////////
+int TIMER3_PEDESTRIAN_CYCLE = 1000;

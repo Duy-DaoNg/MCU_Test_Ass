@@ -8,26 +8,27 @@
 
 #include "timer.h"
 
-void setTimer1(int duration){
+void setTimer1(int duration){             // first trafic light
 	timer1Counter = duration/TICK;
 	timer1Flag = 0;
 }
-void setTimer2(int duration){
+void setTimer2(int duration){            // second traffc light
 	timer2Counter = duration/TICK;
 	timer2Flag = 0;
 }
-void setTimer3(int duration){
+void setTimer3(int duration){            // timer for pedestrian light
 	timer3Counter = duration/TICK;
 	timer3Flag = 0;
 }
-void setTimer4(int duration){
+void setTimer4(int duration){            // buzzer timer
 	timer4Counter = duration/TICK;
 	timer4Flag = 0;
 }
-void setTimer5(int duration){
-	timer5Counter = duration/TICK;
-	timer5Flag = 0;
+void setTimer5(int duration){            // extra timer
+    timer5Counter = duration/TICK;
+    timer5Flag = 0;
 }
+// Run all timer
 void timerRun(){
 	if(timer1Counter > 0){
 		timer1Counter--;
@@ -51,12 +52,6 @@ void timerRun(){
 		timer4Counter--;
 		if(timer4Counter <= 0){
 			timer4Flag = 1;
-		}
-	}
-	if(timer5Counter > 0){
-		timer5Counter--;
-		if(timer5Counter <= 0){
-			timer5Flag = 1;
 		}
 	}
 }
