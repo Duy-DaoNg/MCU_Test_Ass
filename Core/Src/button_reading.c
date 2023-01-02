@@ -18,15 +18,15 @@ void button_reading(){
 	for(int i = 0; i < NO_OF_BUTTONS; i++){
 		Reg2[i] = Reg1[i];
 		Reg1[i] = Reg0[i];
-		Reg0[i] = HAL_GPIO_ReadPin(GPIOA, INPUT_BUTTON[i]);
+		Reg0[i] = HAL_GPIO_ReadPin(GPIOB, INPUT_BUTTON[i]);
 		if(i <= 1){
-			Reg0[i] = HAL_GPIO_ReadPin(GPIOA, INPUT_BUTTON[i]);
+			Reg0[i] = HAL_GPIO_ReadPin(GPIOB, INPUT_BUTTON[i]);
 		}
 		else if(i == 2){
 			Reg0[i] = HAL_GPIO_ReadPin(GPIOB, INPUT_BUTTON[i]);
 		}
 		else{
-			Reg0[i] = HAL_GPIO_ReadPin(GPIOA, INPUT_BUTTON[i]);
+			Reg0[i] = HAL_GPIO_ReadPin(GPIOB, INPUT_BUTTON[i]);
 		}
 		/* Check stable state */
 		if((Reg0[i] == Reg1[i]) && (Reg1[i] == Reg2[i])){
