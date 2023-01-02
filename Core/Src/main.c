@@ -108,15 +108,24 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  SCH_Init();
   setTimer1(100);
   setTimer2(100);
+  SCH_Add_Task(FSM_Traffic_Light_Row, 0, 1);
+  SCH_Add_Task(FSM_Traffic_Light_Col, 0, 1);
+  SCH_Add_Task(FSM_Pedestrian, 0, 1);
+  SCH_Add_Task(display_traffic_light, 0, 1);
+  SCH_Add_Task(FSM_Buzzer, 0, 1);
+  SCH_Add_Task(timerRun, 0, 1);
+  SCH_Add_Task(button_reading, 0, 1);
   while (1)
   {
-	  FSM_Traffic_Light_Row();
-	  FSM_Traffic_Light_Col();
-	  FSM_Pedestrian();
-	  display_traffic_light();
-	  FSM_Buzzer();
+//	  FSM_Traffic_Light_Row();
+//	  FSM_Traffic_Light_Col();
+//	  FSM_Pedestrian();
+//	  display_traffic_light();
+//	  FSM_Buzzer();
+	  SCH_Dispatch_Tasks();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -350,8 +359,9 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef * htim){
-	timerRun();
-	button_reading();
+//	timerRun();
+//	button_reading();
+	SCH_Update();
 }
 /* USER CODE END 4 */
 

@@ -148,7 +148,7 @@ void FSM_Traffic_Light_Row(){
 			/* Save value */
 			buttonPressed_flag[2] = 0;
 			red_time = Set_TL_Time;
-			TIMER3_PEDESTRIAN_CYCLE = red_time + yellow_time + green_time;
+			TIMER3_PEDESTRIAN_CYCLE = (red_time + yellow_time + green_time) * TIMER1_SECOND_DURATION;
 			setTimer1(TIMER1_10SECOND_DURATION * TICK);
 		}
 		break;
@@ -181,7 +181,7 @@ void FSM_Traffic_Light_Row(){
 			/* Save value if button 2 is pressed*/
 			buttonPressed_flag[2] = 0;
 			green_time = Set_TL_Time;
-			TIMER3_PEDESTRIAN_CYCLE = red_time + yellow_time + green_time;
+			TIMER3_PEDESTRIAN_CYCLE = (red_time + yellow_time + green_time) * TIMER1_SECOND_DURATION;
 			setTimer1(TIMER1_10SECOND_DURATION * TICK);
 		}
 		break;
@@ -217,7 +217,7 @@ void FSM_Traffic_Light_Row(){
 			/* Save value if button 2 is pressed */
 			buttonPressed_flag[2] = 0;
 			yellow_time = Set_TL_Time;
-			TIMER3_PEDESTRIAN_CYCLE = red_time + yellow_time + green_time;
+			TIMER3_PEDESTRIAN_CYCLE = (red_time + yellow_time + green_time) * TIMER1_SECOND_DURATION;
 			setTimer1(TIMER1_10SECOND_DURATION * TICK);
 		}
 		break;

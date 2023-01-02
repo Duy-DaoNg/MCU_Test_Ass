@@ -27,7 +27,8 @@ Core/Src/timer.o: ../Core/Src/timer.c ../Core/Inc/timer.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/button_reading.h ../Core/Inc/fsm_traffic_light.h \
  ../Core/Inc/timer.h ../Core/Inc/display_traffic_light.h \
- ../Core/Inc/fsm_pedestrian.h ../Core/Inc/buzzer.h ../Core/Inc/uart.h
+ ../Core/Inc/fsm_pedestrian.h ../Core/Inc/buzzer.h ../Core/Inc/uart.h \
+ ../Core/Inc/scheduler.h
 
 ../Core/Inc/timer.h:
 
@@ -98,3 +99,5 @@ Core/Src/timer.o: ../Core/Src/timer.c ../Core/Inc/timer.h \
 ../Core/Inc/buzzer.h:
 
 ../Core/Inc/uart.h:
+
+../Core/Inc/scheduler.h:

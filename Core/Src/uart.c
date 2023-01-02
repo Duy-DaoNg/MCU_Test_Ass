@@ -12,15 +12,15 @@ void uart_transmit(){
 		case AUTO_RED:
 		case AUTO_GREEN:
 		case AUTO_YEL:
-		case SET_RED:
-		case SET_GREEN:
-		case SET_YEL:
-			if (traffic_light_remain_time_row < 10) HAL_UART_Transmit(&huart1, (void *) str, sprintf(str, "!7SEG:0%d#", traffic_light_remain_time_row), 1000);
-			else HAL_UART_Transmit(&huart1, (void *) str, sprintf(str, "!7SEG:%d#", traffic_light_remain_time_row), 1000);
-			break;
 		case MANUAL_RED:
 		case MANUAL_GREEN:
 		case MANUAL_YEL:
+			if (traffic_light_remain_time_row < 10) HAL_UART_Transmit(&huart1, (void *) str, sprintf(str, "!7SEG:0%d#", traffic_light_remain_time_row), 1000);
+			else HAL_UART_Transmit(&huart1, (void *) str, sprintf(str, "!7SEG:%d#", traffic_light_remain_time_row), 1000);
+			break;
+		case SET_RED:
+		case SET_GREEN:
+		case SET_YEL:
 			if (Set_TL_Time < 10) HAL_UART_Transmit(&huart1, (void *) str, sprintf(str, "!7SEG:0%d#", Set_TL_Time), 1000);
 			else HAL_UART_Transmit(&huart1, (void *) str, sprintf(str, "!7SEG:%d#", Set_TL_Time), 1000);
 			break;

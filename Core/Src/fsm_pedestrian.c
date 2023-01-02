@@ -1,4 +1,4 @@
-/*
+ /*
  * fsm_pedestrian.c
  *
  *  Created on: Dec 18, 2022
@@ -26,7 +26,10 @@ void FSM_Pedestrian(){
 
     /* WORK MODE */
     case WORK:
-        if(timer3Flag == 1){		// 2 cycles passed without pressing the button
+        if(timer3Flag == 1 || FSM_Traffic_Light_State_Row == SET_GREEN
+        	|| FSM_Traffic_Light_State_Row == SET_RED || FSM_Traffic_Light_State_Row == SET_YEL
+			|| FSM_Traffic_Light_State_Row == MANUAL_RED || FSM_Traffic_Light_State_Row == MANUAL_YEL
+			|| FSM_Traffic_Light_State_Row == MANUAL_GREEN){	// 2 cycles passed without pressing the button or MODE changed to SET or MANUAL
             FSM_Pedestrian_State = IDLE;
             break;
         }
